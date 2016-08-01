@@ -833,7 +833,7 @@ body {
 
                                 <span>
                                   <i class="fa fa-clock-o icon-left"></i>
-                                  3 years 6 months
+                                  <span id='years'></span>
                                 </span>
                             </small>
                           </p>
@@ -1038,6 +1038,15 @@ body {
   ga('create', 'UA-61443406-1', 'auto');
   ga('send', 'pageview');
 
+</script>
+
+<script type="text/javascript">
+  var todayDate = new Date();
+  var todayYear = todayDate.getFullYear();
+  var todayMonth = todayDate.getMonth();
+
+  var text = (todayYear - 2012) + " years " + ((todayMonth+1) - 4) + " months";
+  document.getElementById('years').innerHTML = text;
 </script>
 </body>
 </html>
